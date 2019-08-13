@@ -1,0 +1,14 @@
+@import '../../theme.scss';
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 35px;
+    background: linear-gradient(#bf0000, #a06cff);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}

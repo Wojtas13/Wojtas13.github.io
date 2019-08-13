@@ -1,0 +1,56 @@
+@import '../../theme.scss';
+
+.hamburger {
+    border: none;
+    background: none;
+    padding: 15px;
+    position: relative;
+    z-index: 9999;
+
+    &__inner {
+        width: 24px;
+        height: 2px;
+        background-color: color(primary);
+        position: relative;
+        transition: background-color .15s ease-out;
+
+        &::after, &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 24px;
+            height: 2px;
+            background-color: color(primary);
+        }
+
+        &::after {
+            top: 6px;            
+        }
+
+        &::before {
+            top: -6px;            
+        }
+
+        &__isOpen {
+            background-color: transparent;
+
+            &::after {
+                transform: translateY(-6px) rotate(-45deg);
+            }            
+
+            &::before {
+                transform: translateY(6px) rotate(45deg);
+            }
+        }
+
+        &__isClosed {
+            &::after {
+                transform: translateY(0) rotate(0);
+            }            
+
+            &::before {
+                transform: translateY(0) rotate(0);
+            }
+        }
+    }
+}

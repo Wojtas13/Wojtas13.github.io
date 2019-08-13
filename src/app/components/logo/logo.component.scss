@@ -1,0 +1,39 @@
+@import '../../theme.scss';
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 34px;
+}
+
+.gameBtn {
+    width: 150px;
+    height: 50px;
+    background: color(light-bg);
+    border: none;
+    border-bottom: 2px solid color(primary);
+    color: color(primary);
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: color(bg);
+        width: 150px;
+        height: 48px;
+        z-index: -1;
+        top: 0;
+        left: -100%;
+        transition: .3s ease-out;
+    }
+
+    &:hover::before {
+        transform: translateX(100%);
+    }
+}

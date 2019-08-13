@@ -1,0 +1,5 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <app-logo [gameIsClosed]=gameIsClosed (emitGameStatus)=receiveGameStatus($event)></app-logo>
+    <app-game-info [gameIsOpen]=gameStatus (gameIsClosed)=receiveGameStatus($event)></app-game-info>
+</div>

@@ -1,0 +1,11 @@
+<div class="game" [ngClass]="gameIsOpen ? 'game__isOpen' : 'game__isClosed'">
+    <div class="wrapper">
+        <h1 class="game__title">
+            Hide <br/> & <br/> Seek
+        </h1>
+        <p class="game__info">
+            Find all hidden numbers
+        </p>
+    </div>
+    <button class="closeBtn" (click)="closeInfo()">Close</button>
+</div>

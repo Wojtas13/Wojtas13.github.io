@@ -1,0 +1,41 @@
+@import '../../theme.scss';
+
+.wrapper {
+    width: 100%;
+    background: color(bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    padding: 35px;
+    top: 0;
+    left: 0;
+
+    @media (min-width: 1024px) {
+
+        app-hamburger {
+            display: none;
+        }
+
+        app-mobile-menu {
+            display: none;
+        }
+    }
+
+    
+}
+
+.title {
+    color: color(primary);    
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 9999;  
+}
+
+
+
+
