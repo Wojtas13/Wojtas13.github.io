@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class GameInfoComponent implements OnInit {
   @Input()
-  private gameIsOpen: boolean;
+  gameIsOpen: boolean;
   @Output()
   private gameIsClosed = new EventEmitter<boolean>();
   constructor() { }

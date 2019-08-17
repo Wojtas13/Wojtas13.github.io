@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class MobileMenuComponent implements OnInit {
 
   @Input()
-  private menuIsOpen: boolean;
+  menuIsOpen: boolean;
 
   constructor() { }
 
