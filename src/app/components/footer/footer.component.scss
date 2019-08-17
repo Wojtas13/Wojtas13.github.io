@@ -1,0 +1,17 @@
+@import '../../theme.scss';
+
+@include content(flex, column);
+
+.wrapper {
+    color: color(primary);
+
+    &__logo {
+        font-weight: 700;
+        font-size: 2em;
+        margin-bottom: 20px;        
+    }
+
+    &__copyrights {
+        font-size: .8em;
+    }
+}
