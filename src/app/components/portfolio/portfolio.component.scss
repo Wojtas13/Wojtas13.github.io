@@ -1,0 +1,77 @@
+@import '../../theme.scss';
+
+@include header(color(secondary));
+@include content(flex, column);
+
+#about {
+    margin-bottom: 120px;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.wrapper {
+    @media (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.item {
+    position: relative;
+    display: grid;
+    min-height: 300px;
+    grid-template-rows: 1fr;
+    margin-bottom: 50px;
+    
+
+    @media (min-width: 1024px) {
+        margin-bottom: 20px;
+    }    
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90%;
+        opacity: 0;
+        background: color(light-bg);
+        transition: .3s ease-in-out;
+        font-size: 26px;
+        border-radius: 20px;
+
+        &:hover {
+            opacity: 1;     
+        }
+    }
+
+    &__title {
+        color: color(primary);
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__info {
+        color: color(primary);
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+

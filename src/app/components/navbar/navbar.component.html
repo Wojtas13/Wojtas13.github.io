@@ -2,7 +2,7 @@
     <div class="logo">
         <a class="title" routerLink="/">W13</a>
     </div>
-    <app-mobile-menu [menuIsOpen]="isOpen"></app-mobile-menu>
+    <app-mobile-menu [menuIsOpen]="isOpen" ></app-mobile-menu>
     <app-social-media></app-social-media>
     <app-hamburger (isMenuOpen)=toggleMobileMenu($event)></app-hamburger>     
 </nav>

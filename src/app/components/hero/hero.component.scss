@@ -4,11 +4,15 @@
     width: 100%;
     height: 100vh;
     padding: 35px;
-    background: linear-gradient(#bf0000, #a06cff);
+    background: linear-gradient(color(bg), color(secondary));
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     top: 0;
     left: 0;
+
+    @media (min-width: 1024px) {
+        height: calc(100vh - 102px);
+    }
 }

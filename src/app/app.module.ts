@@ -10,6 +10,10 @@ import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.compon
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { GameInfoComponent } from './components/game-info/game-info.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { LogoComponent } from './components/logo/logo.component';
     MobileMenuComponent,
     SocialMediaComponent,
     GameInfoComponent,
-    LogoComponent
+    LogoComponent,
+    PortfolioComponent,
+    AboutComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

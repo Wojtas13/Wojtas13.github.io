@@ -1,0 +1,118 @@
+@import '../../theme.scss';
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Barlow+Condensed:400,400i,700,700i&display=swap');
+
+@include header(color(secondary));
+@include content(grid, column);
+
+.wrapper {
+    color: color(primary);
+    background: linear-gradient(color(secondary), color(bg));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+
+    @media (min-width:1024px) {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-gap: 10px;
+    }
+
+    .content {
+        padding: 20px;
+        padding-top: 0;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li:before { 
+            content: "";
+            border-color: transparent color(primary);
+            border-style: solid;
+            border-width: 0.35em 0 0.35em 0.45em;
+            display: block;
+            height: 0;
+            width: 0;
+            left: -1em;
+            top: 0.9em;
+            position: relative;
+        }
+
+        &__hobby {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__info {
+        border-bottom: 2px solid color(light-bg);
+        padding: 20px;
+        margin-top: 20px;        
+        margin-bottom: 30px;        
+
+        .info__title {
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+.quote {
+    &__title {
+        border: 2px solid color(light-bg);
+        border-radius: 20px;
+        line-height: 1;
+        font-size: 2.2em;
+        font-weight: normal;
+        font-family: 'Abril Fatface', cursive;
+        padding: 25px;
+        text-align: center;
+        margin-bottom: 0;
+
+        .textColor{
+            color: color(light-bg);
+        }
+    }
+
+    &__author {
+        position: relative;
+        color: #ffffff;
+        // font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        padding-top: 15px;
+        z-index: 1;
+        margin-left:110px;
+        padding-left:12px;
+    }
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    img {
+        padding: 20px;
+        display: none;
+
+        @media (min-width: 768px) {
+            display: inline-block;
+            width: 80%;
+            height: 80%;
+        }
+
+        @media (min-width: 1024px) {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

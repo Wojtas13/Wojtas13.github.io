@@ -1,6 +1,6 @@
 $colors: (
     primary: #fff,
-    secondary: #a06cff,
+    secondary: #202020,
     text: #000,
     bg: #bf0000,
     light-bg: #E2252B,
@@ -9,3 +9,33 @@ $colors: (
 @function color ($colorName) {
     @return map-get($colors, $colorName);
 };
+
+@mixin header($backgroundColor) {
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        position: relative;
+        background: $backgroundColor;
+    
+    
+        &__title {
+            font-size: 34px;
+            color: color(primary);
+        }
+    }
+}
+
+@mixin content($display, $direction) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 35px;
+        background: color(secondary);
+        position: relative;
+        display: $display;
+        flex-direction: $direction;
+        justify-content: center;
+    }
+}

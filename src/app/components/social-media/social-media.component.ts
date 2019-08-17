@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @Component({
   selector: 'app-social-media',
@@ -7,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialMediaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: AppRoutingModule) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {  }
 }

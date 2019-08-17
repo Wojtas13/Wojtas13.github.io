@@ -2,7 +2,7 @@
 
 .wrapper {
     width: 100%;
-    background: color(bg);
+    background: linear-gradient(color(bg), #A30606);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +13,8 @@
     left: 0;
 
     @media (min-width: 1024px) {
+        position: relative;
+        background: color(bg);
 
         app-hamburger {
             display: none;
@@ -21,9 +23,7 @@
         app-mobile-menu {
             display: none;
         }
-    }
-
-    
+    }    
 }
 
 .title {

@@ -1,0 +1,8 @@
+@import '../../theme.scss';
+
+@include header(color(bg));
+@include content(flex, column);
+
+.wrapper {
+    background: linear-gradient(color(bg), color(secondary));
+}

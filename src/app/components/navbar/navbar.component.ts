@@ -14,6 +14,10 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  receiveMenuStatus($event) {
+    this.isOpen = $event;
+  }
+
   toggleMobileMenu($event) {
     this.isOpen = $event;
   }

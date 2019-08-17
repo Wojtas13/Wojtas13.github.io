@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HamburgerComponent implements OnInit {
 
   isOpen = false;
+
   @Output()
   private isMenuOpen = new EventEmitter<boolean>();
 
